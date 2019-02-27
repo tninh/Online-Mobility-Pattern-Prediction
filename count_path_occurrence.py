@@ -11,13 +11,8 @@ def count_path_occurrence(raw_string_list, substring_list):
 def count_path_occurrence_with_time(raw_string_dict, substring_dict):
     count = 0
     for day_dict in raw_string_dict.values():
-        sum = 0
-        if len(substring_dict) <= len(day_dict):
-            for t in substring_dict.keys():
-                if substring_dict.get(t) != day_dict.get(t):
-                    sum += 1
-            if sum == 0:
-                count += 1
+        if substring_dict.items() <= day_dict.items():
+            count += 1
     print(count)
 
 
@@ -27,5 +22,5 @@ raw = {'day1': {'5:00': '80', '6:00': '78', '7:00': '99', '8:00': '209'},
        'day4': {'4:00': '6', '5:00': '80', '6:00': '78', '7:00': '100'},
        'day5': {'5:00': '80', '6:00': '80', '7:00': '99'}}
 
-sub = {'5:00': '80', '6:00': '78', '7:00': '99'}
+sub = {'4:00': '80', '5:00': '78', '6:00': '99'}
 count_path_occurrence_with_time(raw, sub)
