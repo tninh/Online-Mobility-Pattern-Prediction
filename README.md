@@ -1,5 +1,5 @@
 # Final Project
-This repository is for the final project
+This repository is for the final project of San Jose State University Master of Science degree. 
 
 
 ## Team Member
